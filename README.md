@@ -17,4 +17,4 @@ This is a basic stopwatch web application built with HTML, CSS, and JavaScript. 
 
 ## License
 
-This project is licensed under the [MIT](LICENSE) License.
+This project is licensed under the MIT License.
