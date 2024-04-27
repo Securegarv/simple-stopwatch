@@ -1,4 +1,3 @@
-// Declare variables to track time and status
 let timer;
 let isRunning = false;
 let seconds = 0;
@@ -7,14 +6,14 @@ let hours = 0;
 
 // Function to start or stop the stopwatch
 function startStop() {
-  if (isRunning) { // If stopwatch is running
-    clearInterval(timer); // Stop the timer
-    document.getElementById("startStop").innerText = "Start"; // Change button text to "Start"
-    isRunning = false; // Update status to not running
-  } else { // If stopwatch is not running
-    timer = setInterval(updateDisplay, 1000); // Start the timer
+  if (isRunning) { 
+    clearInterval(timer); 
+    document.getElementById("startStop").innerText = "Start"; 
+    isRunning = false; 
+  } else { 
+    timer = setInterval(updateDisplay, 1000); 
     document.getElementById("startStop").innerText = "Stop"; // Change button text to "Stop"
-    isRunning = true; // Update status to running
+    isRunning = true; 
   }
 }
 
@@ -23,21 +22,21 @@ function reset() {
   clearInterval(timer); // Stop the timer
   document.getElementById("display").innerText = "00:00:00"; // Reset display to "00:00:00"
   document.getElementById("startStop").innerText = "Start"; // Change button text to "Start"
-  isRunning = false; // Update status to not running
-  seconds = 0; // Reset seconds
-  minutes = 0; // Reset minutes
-  hours = 0; // Reset hours
+  isRunning = false; 
+  seconds = 0; 
+  minutes = 0; 
+  hours = 0; 
 }
 
 // Function to update the display with formatted time
 function updateDisplay() {
-  seconds++; // Increment seconds
-  if (seconds >= 60) { // If seconds reach 60
-    seconds = 0; // Reset seconds
-    minutes++; // Increment minutes
+  seconds++; 
+  if (seconds >= 60) { 
+    seconds = 0; 
+    minutes++; 
     if (minutes >= 60) { // If minutes reach 60
-      minutes = 0; // Reset minutes
-      hours++; // Increment hours
+      minutes = 0; 
+      hours++; 
     }
   }
 
